@@ -1,0 +1,28 @@
+<!-- /templates
+├── base.html          ← base layout (header, footer, common UI)
+├── student_profile.html   ← extends base.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">          
+    <title>{% block title %}Flask App{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <h1>Student Portal</h1>
+      <hr />
+    </header>
+
+    <main>
+      {% block content %}
+      <!-- Child template content will go here -->
+      {% endblock %}
+    </main>
+
+    <footer>
+      <hr />
+      <p>&copy; 2025 Student Management System</p>
+    </footer>
+  </body>
+</html>
